@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html learning recode</title>
+    <style>
+        .red{
+            color: red;
+        }
+        p{
+            text-align: center;
+        }
+        .content{
+            width: 500px;
+            height: 500px;
+            /* background-color: rgb(220, 223, 46); */
+            border: 1px solid red;
+            text-align: center;
+        }
+        a{
+            text-decoration: none;
+        }
+        a:hover{
+            color: red;
+            font-style: 20px;
+            font-family: "黑体";
+        }
+        
+    </style>
+
+
+</head>
+<body>
+    <p style="text-align: left;"><a href="./一些快捷使用方法.html">O、些快捷使用方法</a></p>
+    <p style="text-align: left;"><a href="#一、HTML基础学习记录">一、HTML基础学习记录</a></p>
+    <p style="text-align: left;"><a href="#二、初识CSS在HTML中的应用">二、初识CSS在HTML中的应用</a></p>
+    <p style="text-align: left;"><a href="#三、表单">三、表单</a></p>
+    <p style="text-align: left;"><a href="#四、css高级应用">四、css高级应用</a></p>
+    <p style="text-align: left;"><a href="#五、盒子模型">五、盒子模型</a></p>
+    <p style="text-align: left;"><a href="#六、元素标准流">六、元素标准流</a></p>
+    <p style="text-align: left;"><a href="#七、浮动">七、浮动</a></p>
+    <p style="text-align: left;"><a href="#八、定位">八、定位</a></p>
+
+  
+
+
+
+
+
+
+
+
+
+    <h2 id = "一、HTML基础学习记录">一、HTML基础学习记录</h2>
+    <hr>
+    1. ctrl + / 或？  表示 给这一行注释，解释说明作用<br>
+    2.标题标签：h1-h6 双标签；且每一个标题标签独占一行。<br>
+    3.编辑器中的换行代表浏览器中的一个空格<br>
+    4.换行标签<!-- 4.换行标签 <br> --><br>
+    5.段落标签<!-- 5.段落标签<p></p> --><br>
+    6.水平线标签
+     <!-- <hr> --> <br>
+    7.字体倾斜标签 <em></em><br>
+    8.字体加粗 strong + enter <strong></strong><br>
+    9.img标签  img+enter <img src="" alt=""><br>
+        src 表示图片路径 alt 当图片出现问题时，对图片补充说明
+        还可以设置宽和高 .若只设置一边，则默认按照等比例缩放
+        <!-- <img src="" alt="" height="" width=""> -->
+        <br>
+        ./ 表示在当前目录<br>
+        ../ 表示上一级目录 <br>
+    10.超链接 ： 英文下点一个a，再按enter<a href=""></a><br>
+        >< 这里填写要超链接的内容，如文字，图片等<><br>
+        href 后的冒号里加超链接的链接,注意这里的链接必须是全称。<br>
+        <!-- 例如： <a href="./实验.html">实验</a> -->
+    11.锚链接：点击内容跳转到指定位置<br>
+        给要跳转去的位置设个锚点，即取个id，然后再超链接的链接位置填“#名称（id的内容）”<br>
+    12.功能性超链接： 通过超链接调用电脑上的功能：例如发邮件<br>
+    <a href="mailto:3120315699@qq.com">发送QQ邮件</a><br>
+    13.特殊符号：
+        1.空格 &nbsp;(再编辑器中不论多少空格，在浏览器中只算一个) <br>
+        2.大于号   > 或 &gt; <br>
+        3.小于号   &lt; 或 <br>
+        4.引号     &quot; 主要用在自动显示引号内使用引号。<br>
+        5.版权符号  &copy; <br>
+
+    <h1>加油学习</h1>
+    <p>加油学习把。你会成功的。大大大大大大大大大大</p>
+    <em>斜着</em><br>
+    <strong>believe youself</strong><br>
+    <img src="./img/逸仙.jpg" alt="最馋的婚舰"><br>
+    <a href="./实验.html"><h4>实验</h4></a><br><br>
+    <a href="./img/人物动漫.jpeg"><img src="./img/人物动漫2.jpeg" alt="奥运冠军">跳转另一个</a>
+    <br>
+    <!-- <a href="#一、HTML基础学习记录">一、HTML基础学习记录</a> -->
+    <br>
+    <h2 id ="二、初识CSS在HTML中的应用">二、初识CSS在HTML中的应用</h2><hr>
+            以后的演示都在另外一个文件（ <a href="./实验.html">实验</a> ）中演示。<br>
+        <h4>一，css是什么?</h4> 
+            <p>层叠样式表（Cascading style sheet）</p> 
+        <h4>二，语法规则</h4> 
+            <p>选择器{
+                声明1；<br>
+                声明2；<br>
+                声明3 <br>
+
+            } <br></p> 
+
+        属性和值就是声明，，，，，<br>
+            属性就是一个标签的特征，值就是这个标签的这个特征的可能值。<br>
+        选择器有很多方式，修改“外表”，不是修改内容，而是修改标签。<br>
+         <h5>一，选择器类型</h5> 
+            1.标签选择器：直接选择标签并修改。<br>
+            2.类选择器： &nbsp;&nbsp;&nbsp;&nbsp; <strong class ="red">最常用。</strong> <br>
+                首先在标签中定义类名 class=“类名”，此标签可多次使用。<br>
+                然后，使用。选中方式为，先按一个小点“.” 使用方法和标签选择器一样。<br>
+            3.id选择器：就像锚链接一样，对标签进行id命名，然后再style中先按#进行标签修改。<br>
+                id最好是唯一的，即一个id只使用一次。<br>
+                    ps：虽然在vscode中也能生效，但是不规范。<br>
+            <strong class="red" >选择器优先级：id选择器>类选择器>标签选择器</strong> 
+            <h5>二、css样式</h5>
+                <p>1.内联样式</p>
+                    <p>在head中修改style</p>  <br>
+                <p>2.内部样式</p>
+                    直接在标签内修改。例如：
+                            <!-- <h1 style="color: yellowgreen;font-size: 50px;">中间以分号隔开</h1> -->
+                <p>3.外联样式 </p> 
+                    共两种：链接式；导入式。<br>
+                    链接式：在外部（这里的外部文件是css文件）编辑标签，然后链接到html文件。<br>
+                    在head中使用 “link”,href 后是链接的css文件。<br>
+                    在css文件中直接编辑标签的声明。<br>
+                    导入式：在head中写入style，之后再style中导入css文件。<br>
+                    格式：@import ur1（文件路径）<br>
+                    但是第二种不用，了解就好。<br>
+                        理由：导入式属于CSS2.1特有，对于有些浏览器不兼容。且导入式只能导入css文件，而链接式还可以链接其他文件。<br>
+                <p>4.样式的优先级</p>
+                    <p>内部>外联？内联<br>
+                        取决于再head中谁在下面，谁在下面谁的优先级就高。 </p>
+        <h4>三，字体样式</h4>
+            <p>属性,含义：</p> 
+                <p>font-family 设置字体类型。字体的类型根据电脑上所有的字体而定。  例如：font-family：“隶书；”</p>
+                <p>font-size 设置字体大小，单位px（像素）例如：font-size：12px；</p>
+                <p>font-style 设置字体风格 例如：font-style：italic；</p>
+                <p>font-weight 设置字体粗细（100-900） 例如：font-weight：bold；font-weight：800；</p>
+                <p>font 在一个声明中设置所有字体属性，<strong class="red">必须按照顺序排列：字体风格 粗细 大小 类型（允许缺少）</strong> 例如：font：italic bold 36px “宋体”</p>
+        <h4>四，文本样式</h4>
+            <p>文本样式即将文本看作段落来编辑，和字体样式编辑方式一样。</p>
+            <p>color 设置文本颜色</p>
+            <p>text-alien：left right center 水平对齐方式。
+                <br> 对齐按照标签的宽度，如果没有宽度，就默认浏览器的宽度</p>
+            <p>line-height：a px；意义是在高度为a的一行中水平居中。 <br>
+            但在设置前得先设置行高，设置方法： height：a；<br>
+            文本水平放置原理：计算机先计算得一行的中间位置，然后将文本水平居中放置在中线上。</p>
+            <p>文本背景颜色：backgroung-color: ;  </p>
+            <p>文本装饰：上下中划线以及上中下划线的颜色： <br>
+                text-decoration：underline （下划线）；overline（上划线）；line-though（中划线） <br>
+                若想加颜色，直接在后面编辑颜色即可。 <br>
+                例如： text-decoration：undeiline green； <br>
+                <strong style="color: red;text-decoration: underline rgb(27, 11, 1);">
+                    若不想要划线： text-line：none；即可。可用在超链接时，你不想超链接有下划线时，直接在超链接的a中编辑。 
+                </strong> <br>
+                例如： 对超链接的标签进行编辑：a{ text-decoration：none； }</p>
+        <h4>五、伪类语法</h4>
+                <p>作用：当鼠标放上去会发生变化，如，有些超链接当鼠标放上去后
+                    会变颜色
+                </p>
+                <p>
+                    一、最常用：在style中 a:hover{ 字体样式，文本样式。中间以分号隔开} <br>
+                    这里的颜色是你想要的颜色。 <br>
+                    这个意义是 鼠标移到超链接上时超链接会变成的颜色。<br>
+                    也可在这时的大括号内编辑 上下划线、
+                </p>
+                <p>
+                    二、鼠标点击不放的超链接样式修改： <br>
+                    a:link{
+                        修改字体样式，文本样式。中间以分号隔开。
+                    }
+                </p>
+                <p>
+                    三、链接被点击过后链接的样式修改： <br>
+                    a:visited{
+                        修改字体样式，文本样式。中间以分号隔开。
+                    }
+                </p>
+                <p>
+                    四、鼠标点击不放，和二差不多 <br>
+                    a:active{
+                        修改字体样式，文本样式。中间以分号隔开。
+                    }
+                </p>
+        <h4>六、设置鼠标形状   cursor </h4>
+                <p><img src="./img/鼠标形状.png" alt="鼠标形状类型"></a></p>
+                <br>
+                使用例子：例如在超链接中修改，即当鼠标放在超链接上时，鼠标显示为小手点击状。
+                <br>
+                a：hover{
+                    color：green；
+                    cursor：pointer；
+                }
+        <h4>七、标签的嵌套</h4>
+                例如：将图片居中放置 <br>
+                <p><img src="./img/水墨人物.jpg" alt="水墨人物"></p>
+        <h4>八、div</h4>
+                <p><strong class="red">编辑器中有一个快捷键：““.”+名称”等价于"< div class="名称">< / div></strong>"</p>
+                <p>(一)、初识div</p>
+                <p>dif：div相当于一个容器可以容纳所有元素，便于整体处理。 <br>
+                可在div中设置“容器”的属性，如：宽、高、背景色等等。</p>
+                <p>(二)、div边线</p>
+                <p>border：x像素边框  solid （实线） 颜色</p>
+                <div class="content">
+                    <img src="./img/猫咪.png" alt="猫咪">
+                </div>
+                <p>(三)、div背景图片</p>
+                <p> 插入图片格式：
+                    backgroung：ur1（路径）；
+                </p>
+                <p>ps：插入图片时，若插入的图片小于设定的div大小
+                    则系统默认填充。若不想填充则<br>
+                    background：ur1（路径 ）no-repeat;
+                </p>
+                <p>设置图片在div中的位置
+                    background：ur1（路径） x轴 y轴;
+                    对于x轴 x》0时，向右移动 <br>
+                    对于y轴 y》0时，向下移动 <br>
+                    还可以直接设置图片左右上下位置，
+                    左右：left right center
+                    上下：top bottom center
+                </p>
+                <p>当图片大小大于div时，图片只会显示div大小的部分，在浏览器中微调到
+                    理想的模式即可。
+                </p>
+                <p>若想背景图片与背景颜色共存，则要把背景颜色写在图片下方，要不然背景图片会将背景颜色覆盖（不论大小）。</p>
+        <h4>九、span标签</h4>
+                <p>span标签是一个文字标签，相当于一个小括号。
+                    span的添加不会对文字造成任何的改变，其目的在于：
+                    将一段文字中的某一个、某几个文字或一段文字进行样式的更改。
+                </p>
+        <h4 style="color: red;">十、语义化</h4>
+                <p>编程时要遵循语义化，即
+                    再合适的标签里，放合适的内容。
+                </p>
+                <p>
+                    目的：1.方便后续维护人员维护。
+                          2.方便网络爬虫能够准确地找到你网站的关键字。 <br>
+                          爬虫工作是搜索你网站中的h1标签和head中的meat标签
+                          例如：
+                                <!-- <meta name="description" content="描述你网站的语言"> -->
+                                <!-- <meta name="keywords" content="关于你网站的关键字"> -->
+                </p>
+        <h4>十一、列表</h4>
+                <p>列表分类：
+                    无序列表：前面没有序号 <br>
+                    有序列表：前面有序号（1、2、3，，，） <br>
+                    自定义列表
+                </p>
+            <p>（一）无序列表</p>
+                <p>格式：
+                    <ul type="">
+                        <li>内容一</li>
+                        <li>内容二</li>
+                        <li>内容三</li>
+                        …………
+                    </ul>
+                </p>
+                <p>
+                    其中，ul声明式无序列表，
+                    li声明列表项
+                    <strong>ul相当于一个容器，也可编辑属性</strong>
+                </p>
+            <p>（二）有序列表</p>
+                <p>ol声明有序列表</p>
+                <p>格式：
+                    <ol>
+                        <li>内容一</li>
+                        <li>内容二</li>
+                        <li>内容三</li>
+                        ……………………………… 
+                    </ol>
+                </p>
+                <p>
+                    ol前面的序号不仅可以正序，也可以逆序 <br>
+                    <ol reversed>
+                        <li>yi</li>
+                        <li>er</li>
+                        <li>san</li>
+                    </ol>
+                </p>
+                <p>
+                    序号也可以不是数字，用type编辑。<br>
+                    例如： 
+                    <ol type="i">
+                        <li>yi</li>
+                        <li>er</li>
+                        <li>san</li>
+                    </ol>
+                </p>
+                <p>
+                    序号还可以从指定的数字开始
+                    <ol type="i" start="3">
+                        <li>yi</li>
+                        <li>er</li>
+                        <li>san</li>
+                    </ol>
+                </p>
+            <p>(三)最常用是ul</p>
+                <p>原因：ol前面序号不能编辑，且样式少。
+                大多采用ul然后编辑背景图片
+                </p>
+                <p>
+                ul每一列前面的小图标可以改变：
+                在ul编辑样式时
+                list-style-type:none;即去掉前方小图标
+                list-style-type 可用来编辑每一列前面的“图标”，
+                可以是数字，字母，希腊文字等等等（包含ol中的序号）
+                </p>
+                <p>
+                若是列表前的图标是一个图片，像是小三角等等的，
+                则需先将小图标削去，即list-style-type:none;
+                (或直接 list-style：none；)
+                然后list-style-image:url(路径)
+                </p>
+                <p>
+                也可在削去小图标后对前面内容自行编辑，用span。
+                background:url(路径) 
+                </p>
+            <p>（四）自定义列表</p>
+                <p>dl表示自定义列表的容器 <br>
+                    dt代表一级列表
+                    dd表示二级列表
+                    会自行错开显示
+                </p>
+                <br><br><br>
+                <p>
+                    格式：
+                    <dl>
+                        <dt>一级</dt>
+                        <dd>二级1</dd>
+                        <dd>二级2</dd>
+                        <dt>一级2</dt>
+                        <dd>二级3</dd>
+                        <dd>二级4</dd>
+                        
+                    </dl>
+                </p>
+        <h4>十二、表格</h4> 
+        <strong class="red">
+            基本不用,reason: <br>
+            表格加载效率低
+        </strong>
+            <p>  
+                （一）、表格基本语法： <br>
+                < table>  表格标签 <br>
+                    < tr> 行 <br>
+                        < td>  单元格 <br>
+                            单元格1 <br>
+                        < /td>  <br>
+                        < td>  <br>
+                            单元格2  <br>
+                        < /td> <br>
+                    < /tr> <br>
+                    ………………………………
+                < /table> <br>
+            </p>
+            <p>
+                tr表示一行，tr下跟着的td就是列，下面跟着几个td就是几列。
+            </p>
+            <p>
+                （二）、合并单元格 <br>
+                    列合并：首先确定合并行还是列，然后以左上角为标准做合并。
+                在td里样式修改 colspan="n"(n为合并的数量)。
+                合并后要将被合并的行删去。 <br>
+                    行合并：仍然以左上角为标准，然后再td里修改样式，rowspan=“n”（n为合并的数量）
+                    然后删去被合并的内容。 <br>
+                    例如，合并第一列第二三行，再第一列中第二个td  < td rowspan="2">然后删去第三行。
+            </p>
+    <h2 id ="三、表单">三、表单</h2>  <hr>
+            <p>（一）、什么是表单</p>
+            <p>表单用于手机用户的信息，
+                是浏览器和用户之间沟通的桥梁。</p>
+                <p>就是再注册账号时，让我们输入手机号，输密码的小框框</p>
+            <p>（二）、标签格式</p>
+                1.输入 让用户输入的 输入框的 <br>
+                    xx:< input type ="nn" > <br>
+                    xx表示用户输入内容的类别，如姓名，年龄，密码等 <br>
+                    nn表示输入的内容， <br>
+                    如 ：文本（text） <br>
+                         密码（password）（将输入的密码显示为点点） <br>
+                         单选（radio） 要将单选的内容关联，即将单选的input取一个关联名 <br>
+                            例： 男：<input type="radio" name="sex"> 女：<input type="radio" name="sex"> 
+                            若有默认值，需将 checked="checked"加在默认值input标签内。 <br>
+                            男：<input type="radio" name="sex"  checked="checked"> 女：<input type="radio" name="sex">
+                2.扩大选框选中的范围; <br>
+                    <p>1.给文字部分加一个lable标签 for里面填 input取得id名</p> 
+                    <p>2.给input取一个id名</p> 
+                     <label for="man">男：</label> <input id="man" type="radio" name="sex"  checked="checked"> 女：<input type="radio" name="sex"> <br>
+                3.复选框 <br>
+                    <p>nn为checkbox 为复选框 即正方形小方框</p>
+                     <input type="checkbox">秦始皇
+                4.按钮 <br>
+                     （1）<p>nn为botton 按钮</p>
+                    <input type="button"  value="提交">
+                    <p>value为按钮里面的字</p>
+                     （2）<p>或 <button>完成</button></p>
+                5.下拉选择框 <br>
+                    格式： <br>
+                        <p>
+                            <select name="" id="">
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </p>
+                        <p>其中的name id value可以不要，这些是后台人员收集按钮信息用的，若仅是展示，可以删去。
+                            且在框里默认显示第一个option内容。 <br>
+                            也有默认选中  在其中加 selected="selected" 属性，则默认该属性。
+                        </p>
+                        <select >
+                            <option value="">1月</option>
+                            <option value="">2月</option>
+                            <option value="">3月</option>
+                            <option value="">4月</option>
+                        </select>
+                6.多行文本域 <br>
+                        格式：< textarea name="" id="" cols="30" rows="10">< /textarea> <br>
+                         cois代表能够输入的行数 rows表示每行的列数 但是字数控制效果并不好 所以基本不用
+                         <strong class="red">
+                             实际应用中都是input输入，然后限制字数（使用场景：text和password）
+                         </strong>
+                         <p>
+                             < input type="text" maxlength="11">
+                             maxlength后面的数字就是限制的字数
+                         </p>
+                         <strong class="red">
+                             input也可以编辑样式
+                         </strong>
+            <p>（三）、表单的高级应用</p>
+                         <p>1.隐藏域</p>
+                         <p>type="hidden"</p>
+                         <p>可以隐藏内容，即在浏览器中不显示，不占内存</p>
+                         <p> 例：< input type="text" hidden>输入密码
+                            或 <input type="hidden">
+                        </p>
+                        <p>
+                            <strong class="red">
+                                且hidden不止可以用在表单中，其他标签也可以。
+                                只需在标签中加一个hidden即可。 <br>
+                                例： < p hidden>哈哈哈< /p>
+                            </strong>
+                        </p>
+                        <p>2.只读属性</p>
+                        <p>readonly 代表只读属性，加在表单标签里即可</p>
+                        <p>例： < input type="text" readonly></p>
+                        <p>3.禁用属性</p>
+                        <p><strong class="red">用在后期用户判断。 <br>
+                            即没有什么条件就不能使用什么功能。
+                        </strong></p>
+                        <p>disabed 用法同上</p>
+        <h4 id="四、css高级应用">四、css高级应用</h4>
+            <p>(一)、后代选择器</p>
+                <p>什么是后代？</p>
+                <p>后代即是标签嵌套里面被嵌套的内容</p>
+                <p>例：
+                    <ul>
+                        <li>
+                            <a href=""></a>
+                        </li>
+                    </ul>
+                </p>
+                <p>这里的a就是li的后代，也就是ul的后代的后代</p>
+                <p>修改时，可以根据嵌套关系一层一层定位，然后修改样式</p>
+                <p>
+                    例： 若只想修改ul中li的a，可以直接在head中的style中
+                    编辑  li a {
+                        编辑样式
+                    }
+                </p>
+                <p>且是要是后代都发生变化，即不管是儿子，孙子，，，都变化</p>
+            <p>（二）、子代选择器</p>
+                <p>即只有儿子发生变化，其他后代不变化</p>
+                <p>
+                    格式：
+                    标签1>标签2{
+                        编辑样式
+                    }
+                </p>
+            <p>（三）、并集选择器</p>
+                <p>即，将几个标签放在一起编辑样式</p>
+                <p>格式：
+                    <!-- < head>
+                        < style>
+                        {
+                            标签1，标签2，子代，后代{
+                                编辑样式
+                        }
+                        < /style>
+                    < /head> -->
+                </p>
+            <p>（四）、交集选择器</p>
+                <p>当内容里有相同的标签，有有相同的内容，想修改指定的样式，可采用这种方法</p>
+                <p>格式：
+                    标签.类名（中间无空格）{
+                        编辑样式
+                    }
+                </p>
+            <p>（五）、属性选择器</p>
+            <p>只要具备某个属性，或者属性=属性值，就会被选中执行某些操作</p>
+            <p>格式：
+                [属性]{
+                    编辑样式
+                }
+                或
+                [属性="属性值"]{
+                    编辑样式
+                }
+                [属性^="字母/数字/其他"]{
+                    编辑样式
+                }（^=表示以什么开头）
+                [属性 $="字母/数字/其他"]{
+                    编辑样式
+                }（$表示以什么结尾）
+                [属性 *="字母/数字/其他"]{
+                    编辑样式
+                }（*代表只要包含）
+            </p>
+        <h4 id="五、盒子模型">五、盒子模型</h4>
+            <p>（一）、什么是盒子模型</p>
+                <p>盒子模型是一个概念，，外面一个大容器，里面装有不同的一个个的小点容器。
+                    是一种设计思路，按这样的思路来设计我们的网页。优点：利于后期维护。
+                </p>
+            <p>（二）、计算方式</p>
+                <p>实际展示大小=元素大小 +边框 + 内边距</p>
+                <p><img src="./img/盒子模型计算方式图1.png" alt="盒子模型计算方式"></p>
+                <p><img src="./img/盒子实际高宽计算方法.png" alt="盒子实际高宽计算方法"></p>
+            <p>（三）、边框</p>
+                <p>1.四条边框同时设置</p>
+                    <p> border：边框宽度 边框样式 边框颜色</p>
+                    <p>边框样式：
+                        solid 实线 <br>
+                        dashed 虚线 <br>
+                        double 双实线 <br>
+                        dotted （圆）点状虚线 <br>
+                    </p>
+                    <p>
+                        例子： border：1px solid red：
+                    </p>
+                <p>2.边框分开编辑</p>
+                    <p> border-top：; 上边框</p>
+                    <p> border-bottom：; 下边框</p>
+                    <p> border-left：; 左边框</p>
+                    <p> border-right：; 右边框</p>
+                <p>补充知识：通过边框将div元素变成圆形</p>
+                <p>
+                    要想将div元素变成圆形，则div的边框必须是正方形，然后设置border-radus：50%；
+                </p>
+                <p>
+                    例：.名称（div的）{
+                        height：200px；
+                        width：200px；
+                        border-radius：50%；
+                    } <br>
+                    即可将div元素变成圆形。还可通过调节border-radius的大小来调节元素的外形，类似于圆角
+                </p>
+                <p>
+                    使用div绘制三角形
+                </p>
+                <p>理解边框在边角的构成方式：
+                    当放大边框大小可见，边框在边角是对半分的，
+                    且会扩大元素的边界长度。 <br>
+                    例：若边界长宽都是200px，边框宽度是10px，则实际上的边界
+                    长宽为220*220px。（长宽两边各增加10px）
+                </p>
+                <p>故，当边框宽度远大于边界长宽时，可见的图形就是一个
+                    被对角线分割的长方形。
+                </p>
+                <p>若要做三角形，只需将需要的三角形对面的边框删去，其余的边框颜色透明即可</p>
+                <p>颜色透明：transparent</p>
+            <p>(四)、内外边距</p>
+                <p>边距有上下左右之分</p>
+                <p>内外边距是相对而言的</p>
+                <p>1.两个容器有包含关系</p>
+                    <p>a包含b ，则b与a之间的边距对于a来说就是内边距，对于b就是外边距</p>
+                <p>2.两个容器没有相交关系，离得有些距离</p>
+                    <p>则，他们之间的距离对于他们就是外边距</p>
+                <p>margin 外边距</p>
+                <p>padding 内边距</p>
+                <p>若是默认情况，则以左上角为基准（大小以当前页面大小为基准），（无其它操作）仅可以进行上左的边距编辑</p>
+                <p style="color: red;font-size: 20px;">3.几种赋值的方式</p>
+                    <p style="color: red;font-size: 20px;">
+                        1.margin-top：100px；对某一个边距进行赋值 <br>
+                        2.margin：100px；直接对margin赋值，默认对四边边距赋值（在当前基准下） <br>
+                        3.margin：200px 100px； 对margin赋两个值，则前面的表示上下 后面的表示左右 <br>
+                        4.margin：400px 300px 200px 100px；对margin赋四个值，则是依次对上右下左进行赋值（从上按顺时针方向） <br>
+                        5.赋值不一定是数值，也可以是单词。例如：auto就是左右居中
+                    </p>
+                <p>3.内外边距对比</p>
+                    <p>margin并不会改变元素本身大小</p>
+                    <p>padding相当于在保证div大小不变的情况下，向外增大设定的大小。
+                        相当于padding改变的是显示的大小。
+                    </p>
+                <p><strong class="red">可以在div样式中加一个box-sizing：border-box；</strong> <br>
+                这就意味着边框，内边距都会算在div的大小中，即现实中的实际大小就是div的大小。
+                </p>
+        <p>初始化css样式</p>
+                <p>写样式的时候，首先要写上： <br>
+                *{
+                    margin 0;
+                    padding 0;
+                }
+                </p>
+                <p>
+                    作用：去掉浏览器自身的页边距（不同浏览器不同）
+                </p>
+        <p id="六、元素标准流">六、元素标准流</p>
+            <p>（一）元素标准流</p>
+                <p><img src="./img/元素标准流.png" alt="元素标准流"></p>
+                <p>页面元素分为：块元素、行内块元素、行内元素</p>
+                <p>1、块元素</p>
+                    <p>一定是独占一行，可以设置宽高。如ul、ol、li、form、h1-h6、hr、p、table、div等</p>
+                <p>2、行内块元素</p>
+                    <p>不独占一行，可以设置宽高。 <br>
+                    如：button、img、input、select等
+                    </p>
+                <p>3、行内元素</p>
+                    <p>不独占一行，不可设置宽高、如：span、a、label等</p>
+            <p>（二）、标准流之间的转换</p> 
+                <p>只需在元素样式中修改 <br>
+                    diaplay:nn(要修改的元素名称)
+                </p>
+                <p>元素名称： <br>
+                块元素：block 
+                行内块元素： inline-block 
+                行内元素： inline
+                不显示：none
+                </p>
+            <p>（三）、几个特殊元素</p>
+                <p>img button input </p>
+                <p>属于可置换元素，即本身就具备宽高的属性，不是只有css样式来决定</p>
+                <p>对于可置换元素，样式只是决定他们是否独占一行</p>
+        <h4>补充知识</h4>
+                <p>实际设计中有些小竖线不是用border，而是直接设置一个线元素，设置宽高和bgc即可</p>
+        <h4 id="七、浮动">七、浮动</h4>
+            <p>（一）、浮动设置</p>
+            <p>浮动过后就脱离元素标准流，就都可以设置宽高，且不独占一行。
+            </p>
+            <p>浮动即相当于去了“第二空间”，则原有的标准流的空间就留出来了</p>
+            <p>
+                添加浮动方式： <br>
+                在样式中添加float（属性），left，right，none等等等。
+            </p>
+            <p style="color: red;">在数据列右浮动时，会颠倒顺序。</p>
+            <p style="color: red;">解决方法： <br>
+                先让父元素右浮动，然后元素左浮动。
+            </p>
+            <p>(二)、清楚浮动</p>
+                <p>浮动的意义是布局页面，但并不想让未浮动的内容变化。所以需要清除浮动。即让未浮动的内容保持原位。</p>
+                <p>方法：</p>
+                    <p>1.给浮动元素的父元素加一个高。 <br>
+                    因为浮动的元素他的宽还是存在的（所以浮动后是顺序相接）。
+                    想要未浮动元素不动，只需给浮动的元素加一个高即可。
+                    若没有父元素可以加一个div。
+                    </p>
+                    <p>2.建一个名为clearfix的空白div来清除浮动</p>
+                    <p>一、在clearfix的样式中加clear：both；</p>
+                    <p>作用：清空左右样式</p>、
+                    <p style="color: red;">3.使用伪类清除浮动(以后最常用。直接给要清楚的加一个类名，然后编辑一类)</p>
+                        <p>
+                            格式：
+                            直接在父元素样式中编辑 <br>
+                            例： ul:after{
+                                clear:both; <br>
+                                display:block; <br>
+                                content:""; <br>
+                                visibility:hidden; <br>
+                                height:o;
+                            }
+                        </p>
+                    <p id="清除浮动效果">4.给父级元素加一个overflow：hidden；</p>
+            <p>（三）、超出隐藏部分</p>
+                <p>即要显示的内容大小大于设定的大小时，浏览器显示的是内容的大小。但我们只想要设定的大小。这是就需要编辑</p>
+                <p>我们就可以设置overflow属性，有两个值：hidden（隐藏）、score（超出部分可滚动显示）、visible（默认值。内容不会被修剪，会呈现在盒子外）、auto（若内容被修剪，则浏览器会显示滚动条以便查看其余内容。效果同score）</p>
+                <p>overflow应用场景：</p>
+                <p><a href="#清除浮动效果">1.起到清除浮动的效果</a> </p>
+                <p style="color: red;">2.触发BFC机制，格式化元素</p>
+                <p style="color: red;">当在大的div中包含一个小div时，给小的div设置margin-top时，会出现一种情况，上边距属性会对大小div同时生效，这个被称为外边距合并，是浏览器默认的情况</p>
+                <p>
+                    若想解决这个问题：在大的div样式中加以一个overflow：hidden；样式即可。
+                </p>
+                <p>原因：这时加上这个属性会触发BFC机制，会格式化该元素，使其外边距不在和他人合并。</p>
+        <h4 id="八、定位">八、定位</h4>
+</body>
+</html>
